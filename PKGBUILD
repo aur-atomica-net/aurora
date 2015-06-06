@@ -17,7 +17,6 @@ build() {
   cd "${srcdir}/${_gitname}"
   unset _JAVA_OPTIONS
   GRADLE_USER_HOME="${srcdir}" ./gradlew assemble
-  mv "${srcdir}/${_gitname}/dist/libs/${pkgname}*.jar" "${srcdir}/${_gitname}/dist/libs/${pkgname}.jar"
 }
 
 pkgver() {
@@ -26,7 +25,7 @@ pkgver() {
 }
 
 package() {
-  install -Dm644 "${srcdir}/${_gitname}/dist/libs/${pkgname}.jar" "${pkgdir}/usr/share/${pkgname}/${pkgname}.jar"
+  install -Dm644 "${srcdir}/${_gitname}/dist/libs/aurora-0.9.0-SNAPSHOT.jar" "${pkgdir}/usr/share/${pkgname}/${pkgname}.jar"
 }
 
 # vim:set ts=2 sw=2 et:
