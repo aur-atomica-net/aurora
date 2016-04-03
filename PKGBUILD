@@ -7,8 +7,8 @@ pkgdesc='Fault tolerant job scheduler for Mesos which handles dependencies and I
 arch=('any')
 url='http://aurora.apache.org/'
 license=('Apache')
-depends=('jre8-openjdk')
-makedepends=('jdk8-openjdk' 'git' 'python2')
+depends=('java-environment')
+makedepends=('java-environment' 'git' 'python2')
 source=("http://apache.claz.org/aurora/${pkgver}/apache-aurora-${pkgver}.tar.gz")
 sha256sums=('682e953237811d4fb0c94a08fd027c967de637be4260a32c19ee1e77c0f930e9')
 
